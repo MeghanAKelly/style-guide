@@ -29,10 +29,11 @@ h1, h2, h3, ul {
 	font-size: 1.1em;
 	}
 
-#elsevier-logo {
+#elsevier-htmllogo {
 max-width: 180px;
 padding: 10px;
 }
+
 
 footer{
 	background-color: white;
