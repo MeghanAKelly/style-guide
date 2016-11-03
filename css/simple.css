@@ -1,15 +1,45 @@
 /*FLEXBOX LAYOUT */
+
 body{
-	background-color: #111;
-  margin: 0;
-  padding: 0;
+	background-color: white;
+  	margin: 0;
+  	padding: 0;
     font-family: "NexusSans", Arial, sans-serif;
     color: #323232;
 }
 
+/*Font*/
+
+h1, h2, h3, ul {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0.2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+	h1 {
+	font-size: 1.7em;
+}
+	h2 {
+	font-size: 1.5em;
+}
+	h3 {
+	font-size: 1.3em;
+	}
+	h4 {
+	font-size: 1.1em;
+	}
+
+#elsevier-logo {
+max-width: 180px;
+padding: 10px;
+}
+
 footer{
-	background-color: olive;
+	background-color: white;
+	border-top: 3px solid orange;
 	padding: 1rem;
+	display: flex;
+	flex-direction: row;
 }
 .container{
 	display: flex;
@@ -20,8 +50,9 @@ footer{
 .sidebar{
 	order: 1;
 	flex: 1;
-	background-color: #dcdcdc;
-  flex-basis: auto;
+	display: flex;
+	background-color: #f5f5f5;
+	flex-direction: column;
   padding: .5rem;
   min-height: 666px;
 }
@@ -29,30 +60,60 @@ footer{
 .main{
 	order: 1;
 	flex: 5;
-	background-color: #CE9B64;
+	background-color: white;
   padding: .5rem;
 }
 
 .content {
-	min-height: 100%;
 	margin: 0;
 	position: relative;
 	display: inline-block;
+	padding-left: 20px;
+	line-height: 1.3em;
 	}
+
+.content-item {
+	padding: 5px 15px 0 20px;
+	}
+
+/* Menus*/	
+	.menu-horizontal {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		padding: 5px 15px 0 0;
+		}
 	
-.menu-horizontal {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	}
+	.menu-item {
+		text-decoration: none;
+		color: #323232;
+		}
+	
+	.menu-item-horizontal {
+		padding: 15px;
+		}
 
-.menu-item-horizontal {
-	padding: 10px;
-	text-decoration: none;
-	}
+	.menu-horizontal .menu-item-horizontal:first-child {
+		padding-left: 0px;
+		}
 
-.menu-horizontal .menu-item-horizontal:first-child {
-	padding-left: 0px;
+	.menu-item-horizontal:active {
+		border-bottom: 3px solid orange;
+		}
+		
+		.nav-group {
+		padding-left: 20px;
+		padding-top: 20px;
+		}
+
+	.nav-links {
+		display: flex;
+		flex-direction: column;
+		padding-left: 20px;
+		line-height: 1.5em;
+		}
+.main-section {
+	padding-top: 50px;
 	}
 
 @media (max-width: 768px) {
@@ -66,7 +127,15 @@ footer{
 
 .main {
 position: absolute;
-top: 0;
 left:0;
+bottom: 0;
 height: 100%;
+}
+
+
+.footer {
+position: absolute;
+bottom: 0;
+left:0;
+width: 100%;
 }
