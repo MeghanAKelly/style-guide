@@ -69,12 +69,13 @@ footer{
 	margin: 0;
 	position: relative;
 	display: inline-block;
-	padding-left: 20px;
+	padding-left: 40px;
 	line-height: 1.3em;
 	}
 
+
 .content-item {
-	padding: 5px 15px 0 20px;
+	padding: 25px 15px 0 0px;
 	}
 
 /* Menus*/	
@@ -99,7 +100,12 @@ footer{
 		}
 
 	.menu-item-horizontal:active {
-		border-bottom: 3px solid orange;
+		text-decoration: underline;
+		padding-bottom: 0;
+		}
+	
+	.menu-item-horizontal:hover {
+		color: #e9711c;
 		}
 		
 		.nav-group {
@@ -139,4 +145,5 @@ position: absolute;
 bottom: 0;
 left:0;
 width: 100%;
+justify-content: flex-end;
 }
