@@ -78,7 +78,7 @@ footer{
 	padding-top: 59px;
 	padding-bottom: 15px;
 	border-bottom: 1.5px #cdcdcd solid;
-	padding-right: 100%;
+	padding-left: 50px;
 	width: 100%;
 	display: flex;
 	}
@@ -98,9 +98,8 @@ padding: 20px;
 
 /* Menus*/	
 	.menu-horizontal {
-		padding: 0px 50px 0 0;
 		position: fixed;
-		right: 0;
+		right: 50px;
 		display: flex;
 		justify-content: flex-end;
 		max-width: 100%;
@@ -114,6 +113,10 @@ padding: 20px;
 		
 	.menu-item-horizontal {
 		padding: 0 15px;
+		}
+	
+	.menu-item-horizontal:last-child {
+		padding-right: 0;
 		}
 
 	.menu-item-horizontal:active {
@@ -145,9 +148,11 @@ padding: 20px;
 #title {
 display: flex;
 vertical-align: baseline;
-padding: 0px 0 0 50px;
 }
 
+.title-border {
+
+}
 
 .flex-row-stay {
 	display: flex;
