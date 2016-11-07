@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
-  <title>EPM Style Guide</title> 
+  <title id="forjs" >Typography</title> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#000000">
 </head>
@@ -60,11 +60,11 @@
 					</div> <!--/.nav-group-->
 				  </nav> <!--sidebar-->
 		  			<div class="flex-col">
-						<div class="title-section">
-							<div class="title">
-								<h1>Typography</h1>
+						<div class="title-section flex-row">
+							<div id="title">
+								<h1 id="titlejs"></h1>
 							</div>
-							<div class="menu-horizontal">
+							<div class="menu-horizontal flex-row-stay">
 								<a class="menu-item menu-item-horizontal" href= #about>About</a>
 								<a class="menu-item menu-item-horizontal" href= #composition>Composition</a>
 								<a class="menu-item menu-item-horizontal" href= #behavior>Behavior</a>
@@ -130,5 +130,10 @@
 	<div class="footer flex-row">
 		<footer><img id="elsevier-logo" src= "img/elsevierlogo.png" alt="Elsevier logo"></footer>
 	</div> 
+	
+	<script>
+	var titleName = document.getElementById("forjs").innerHTML;
+document.getElementById("titlejs").innerHTML = titleName;
+</script>
 </body>
 </html>
