@@ -1,4 +1,4 @@
-/* TRIAL LAYOUT */
+/* CODE BOXES */
 
 body{
 	background-color: white;
@@ -10,7 +10,7 @@ body{
 
 /*Font*/
 
-h1, h2, h3, ul {
+h1, h2, h3, h4, ul {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0.2em;
     -webkit-margin-start: 0px;
@@ -27,8 +27,25 @@ h1, h2, h3, ul {
 	font-size: 1.2em;
 	font-weight: 700;
 	}
+	h4 {
+	font-size: 1.0em;
+	line-height: 1.1em;
+	color: #737373;
+	font-weight: 700;
+	}
 
-
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    float: right;
+    margin-right:10%;
+}
 
 .flex-row {
 	display: flex;
@@ -40,6 +57,7 @@ footer{
 	border-top: 3px solid orange;
 	padding: 1rem;
 	width: 100%;
+	z-index: 5;
 }
 
 .flex-col {
@@ -154,6 +172,20 @@ vertical-align: baseline;
 	flex-direction: row;
 
 	}
+
+.code-box {
+height: 120px;
+width: 85%;
+margin-left: 5%;
+padding: 5px;
+border: 1px solid #cdcdcd;
+overflow: auto;
+margin-bottom: 20px;
+}
+
+.code-container {
+padding-bottom: 50px;
+}
 
 @media (max-width: 768px) {
 .container {
