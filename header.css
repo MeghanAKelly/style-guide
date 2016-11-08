@@ -1,0 +1,403 @@
+
+@media(min-width: 768px) {
+
+    .mobile-header {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+
+    .mobile-menu-and-logo {
+        padding-left: 16px;
+    }
+
+    .mobile-menu {
+        font-size: 14px;
+        font-family: NexusSansWebPro, sans-serif;
+        text-align: left;
+    }
+
+        .mobile-menu img {
+            display: block;
+            width: 36px;
+        }
+
+    .mobile-logo {
+        padding-left: 24px;
+    }
+
+        .mobile-logo img {
+            height: 23px;
+        }
+
+    .mobile-search {
+        text-align: right;
+        padding-right: 16px;
+    }
+
+        .mobile-search .gizmo-search {
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+    /* Main Menu */
+
+    .main-menu {
+        padding-left: 32px;
+    }
+
+        .main-menu p {
+            font-size: 15px;
+            font-family: NexusSansWebPro, sans-serif;
+        }
+
+    /*Search header*/
+
+    .search-panel .input-group {
+        border-bottom: solid 2px #DDD;
+        padding-bottom: 2px;
+    }
+
+    .search-panel h2 {
+        display: inline;
+        margin: 0px;
+    }
+
+    input[type=text]::-ms-clear {
+        display: none;
+    }
+
+    .search-panel input[type="text"], .search-panel input[type="text"]:focus, .search-panel .form-control:focus {
+        border: none;
+        box-shadow: none;
+        border-left: solid 1px #DDD;
+    }
+
+    .search-panel button:disabled, .search-panel button:disabled:hover {
+        background-color: #dcdcdc;
+    }
+
+    .search-panel .dropdown-menu {
+        margin-top: 5px;
+        background-color: #004E65;
+        margin-left: 5px;
+        text-align: left;
+        padding-top: 20px;
+    }
+
+        .search-panel .dropdown-menu ul {
+            margin-top: 20px;
+            list-style-type: none;
+        }
+
+        .search-panel .dropdown-menu li {
+            margin-bottom: 20px;
+        }
+
+        .search-panel .dropdown-menu h2 {
+            margin-left: 32px;
+            margin-right: 32px;
+            font-size: 18px;
+            font-family: NexusSansWebPro, sans-serif;
+        }
+
+        .search-panel .dropdown-menu span, .search-panel .input-group ul li a {
+            /*color: #007398 ;*/
+            font-size: 18px;
+            font-family: NexusSansWebPro, sans-serif;
+        }
+
+
+        .search-panel .dropdown-menu h2 a, .search-panel .input-group ul li a {
+            color: #FFF;
+        }
+
+    .search-panel .dropdown-toggle {
+        background-color: #FFF;
+        color: #007398;
+    }
+
+        .search-panel .dropdown-toggle > h2:after {
+            font-family: 'gizmo-icons-regular';
+            content: "\e9a5";
+            font-weight: 600;
+            margin-left: 10px;
+            vertical-align: text-bottom;
+        }
+
+    .search-panel .open .dropdown-toggle > h2:after {
+        content: "\e9a8" !important;
+    }
+
+    .search-panel .search-button {
+        background-color: #006699;
+        border: none;
+        border-radius: 0;
+        margin-left: 0px !important;
+        height: 35px;
+        width: 40px;
+        padding: 0px;
+    }
+
+    .search-panel .gizmo-search {
+        font-size: 18px;
+        font-weight: 600;
+        color: #FFF;
+        vertical-align: text-bottom;
+        display: inline-block;
+    }
+
+    .search-panel .close-icon {
+        border: 1px solid transparent;
+        background-color: transparent;
+        display: inline-block;
+        vertical-align: middle;
+        outline: 0;
+        cursor: pointer;
+        position: absolute;
+        right: 35px;
+    }
+
+        .search-panel .close-icon:after {
+            content: "X";
+            display: block;
+            position: absolute;
+            background-color: #DDD;
+            z-index: 999;
+            right: 15px;
+            top: 7px;
+            margin: auto;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            font-weight: normal;
+            font-size: 12px;
+            cursor: pointer;
+            padding: 4px 7px;
+        }
+
+    .search-value {
+        cursor: pointer;
+    }
+    /*Mobile Search*/
+    .clever-search {
+        padding: 20px 0px;
+        position: absolute;
+        background: #fff;
+        z-index: 100;
+        height: 75px;
+        top: -200px;
+        left: 0;
+        right: 0;
+        /* For Safari 3.1 to 6.0 */
+        -webkit-transition-property: top;
+        -webkit-transition-duration: 500ms;
+        -webkit-transition-timing-function: linear;
+        /* Standard syntax */
+        transition-property: top;
+        transition-duration: 500ms;
+        transition-timing-function: linear;
+    }
+
+    .clever-search-show {
+        top: -25px;
+    }
+
+    .clever-search div.clever-search-panel {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .clever-search .search-cancel {
+        position: absolute;
+        bottom: 5px;
+        margin-left: 20px;
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        display: none;
+    }
+
+
+    ::-webkit-scrollbar {
+        width: 8px; /* for vertical scrollbars */
+        height: 8px; /* for horizontal scrollbars */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(103, 102, 102, 0.7);
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 0 6px #000000;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
+
+}
+
+
+
+    
+/* My Profile */
+
+.my-profile {
+    height: 20px;
+    padding-right: 32px;
+}
+
+    .my-profile h2 {
+        font-family: NexusSansWebPro, sans-serif;
+        font-size: 16px;
+        color: #007398;
+    }
+
+.my-profile-dropdown {
+    float: right;
+}
+
+    .my-profile-dropdown button {
+        padding-top: 0px;
+        background-color: #FFF;
+    }
+
+    .my-profile-dropdown h2 {
+        display: inline;
+    }
+
+     .my-profile-dropdown h2 a:after {
+        font-family: 'gizmo-icons-regular';
+        font-size: 16px;        
+        content: "\e9a7";
+        margin-left: 3px;        
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: bottom;
+} 
+
+    .my-profile-dropdown button.dropdown-toggle {
+        margin-top: 0px;
+        position: relative;
+        top: 6px;
+    }
+
+    .my-profile-dropdown .glyphicon-menu-down {
+        margin-left: 5px;
+    }
+
+    .my-profile-dropdown .dropdown-menu {
+        margin-top: 5px;
+        background-color: #004E65;
+        margin-right: 5px;
+        text-align: right;
+        padding-top: 20px;
+    }
+
+        .my-profile-dropdown .dropdown-menu li {
+            margin-bottom: 20px;
+        }
+
+        .my-profile-dropdown .dropdown-menu h2 {
+            margin-right: 32px;
+            font-size: 18px;
+            font-family: NexusSansWebPro, sans-serif;
+        }
+
+            .my-profile-dropdown .dropdown-menu h2 a {
+                color: #ffffff;
+            }
+
+    .my-profile-dropdown .dropdown-toggle:after {
+        font-family: 'gizmo-icons-regular';
+        color: #007398;
+        content: "\e9a5";
+        font-weight: 600;
+        margin-left: 10px;
+        position: relative;
+        vertical-align: bottom;
+    }
+
+    .my-profile-dropdown .open .dropdown-toggle:after {
+        content: "\e9a8" !important;
+    }
+
+.header {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-left: 24px;
+}
+
+/* My Mobile Profile */
+
+.my-mobile-profile {
+    height: 74px;
+    background-color: #1B2D31;
+    padding-left: 64px;
+}
+
+.my-mobile-profile-dropdown {
+    float: left;
+    padding-top: 20px;
+}
+
+    .my-mobile-profile-dropdown button {
+        background-color: #1B2D31;
+    }
+
+    .my-mobile-profile-dropdown li {
+        margin-bottom: 20px;
+    }
+
+    .my-mobile-profile-dropdown h2 {
+        font-family: NexusSansWebPro, sans-serif;
+        font-size: 24px;
+        color: #ffffff;
+        display: inline;
+    }
+
+     .my-mobile-profile-dropdown  h2 a {
+        font-size: 21px;
+        color: #ffffff;
+    }
+
+     .my-mobile-profile-dropdown  h2 a:hover {       
+        color: #c95301;              
+                
+    }
+
+     .my-mobile-profile-dropdown  h2 a:after {
+        font-family: 'gizmo-icons-regular';
+        font-size: 21px;        
+        content: "\e9a7";
+        margin-left: 3px;        
+        text-decoration: none;
+        display: inline-block;
+        vertical-align: bottom;
+} 
+
+    .my-mobile-profile-dropdown .dropdown-menu {
+        padding-top: 20px;
+        margin-top: 10px;
+        background-color: #007398;
+        margin-left: -23px;
+    }
+
+        .my-mobile-profile-dropdown .dropdown-menu h2 {
+            margin-left: 32px;
+        }
+
+            .my-mobile-profile-dropdown .dropdown-menu h2 a {
+                font-size: 21px;
+                color: #ffffff;
+            }
+
+    .my-mobile-profile-dropdown .dropdown-toggle:after {
+        font-family: 'gizmo-icons-regular';
+        color: #ffffff;
+        content: "\e9a5";
+        font-size: 21px;
+        font-weight: 600;
+        margin-left: 10px;
+        position : relative;
+        vertical-align: bottom;
+    }
+
+    .my-mobile-profile-dropdown .open .dropdown-toggle:after {
+        content: "\e9a8" !important;
+    }

@@ -1,0 +1,77 @@
+<html>
+<head><!-- Header --> <!-- Fonts! -->
+      <link href="css/fontstyle.css" rel="stylesheet">
+  
+  <!-- Style Guide Boilerplate Styles -->
+  <link rel="stylesheet" href="header.css">
+  
+      <link rel="stylesheet" href="Content/bootstrap.css">
+  
+  </head>
+<body>
+                        <div id="header" class="header col-xs-12 hidden-xs hidden-sm">
+                            <!-- Logo -->
+                            <div id="logo" class="logo col-xs-3 ">
+                                <img src="Content/themes/elsevier-logo.gif" alt="Elsevier Logo" />
+                            </div>
+                            <!-- Search -->
+                            <div id="search" class="search col-xs-6 my-profile" ng-controller="searchController">
+                                <div class="search-panel" ng-show="searchAreas.length > 0">
+                                    <form ng-submit="redirectBasedOnSearchArea()">
+                                        <div class="input-group">
+                                            <div class="input-group-btn dropdown" dropdown is-open="status.isclosed">
+                                                <button type="button" class="btn dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+                                                    <!-- Apply different css classes based on the conditions in angular js, for hhc area will be 1 but we still need to show drop down -->
+                                                    <h2 ng-if="selectedItem">{{selectedItem.name}}</h2>
+                                                    <h2 ng-if="!selectedItem && showDropdownMenu">Search</h2>
+                                                    <span ng-if="!showDropdownMenu">Search</span>
+                                                </button>
+                                                <!-- Apply different css classes based on the conditions in angular js, for hhc area will be 1 but we still need to show drop down ng-show="searchAreas.length needs to be removed-->
+                                                <ul class="dropdown-menu dropdown-menu-left" role="menu" ng-show="showDropdownMenu">
+                                                    <li ng-repeat="area in searchAreas">
+                                                        <h2>
+                                                            <a ng-click="setChoice(area)">{{area.name}}</a>
+                                                        </h2>
+                                                        <ul>
+                                                            <li ng-if="area.subSearchAreas.length > 0" ng-repeat="subarea in area.subSearchAreas">
+                                                                <h2>
+                                                                    <a ng-click="setChoice(subarea)">{{subarea.name}} </a>
+                                                                </h2>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <input name="searchterm" id="searchterm" type="text" placeholder="Enter search term..." ng-model="searchText"
+                                                   typeahead-min-length="3"
+                                                   typeahead="searchterm for searchterm in searchSuggestions | filter:$viewValue:startsWith | limitTo:5"
+                                                   class="form-control search-box">
+                                            <span class="close-icon" ng-show="searchText.length" ng-click="searchText=''"></span>
+                                            <span class="input-group-btn">
+                                                <button type="submit" class="btn btn-default search-button" id="btn_CleverSearch" ng-disabled="!searchText">
+                                                    <span class="gizmo-search"></span>
+                                                </button>
+                                            </span>
+                                            <a class="search-cancel hidden-md hidden-lg" ng-click="$parent.searchclass =''">Cancel</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- My Profile -->
+                            <div id="my-profile" class="my-profile col-xs-3" ng-controller="profileController">
+                                <div class="my-profile-dropdown hidden-xs hidden-sm">
+                                    <h2 ng-if="genericUser"><a href={{loginUrl}}>Login</a></h2>
+                                    <div dropdown class="dropdown" ng-hide="genericUser">
+                                        <button dropdown-toggle class="btn dropdown-toggle" type="button">
+                                            <h2>{{ userProfile.firstName }} {{ userProfile.lastName }}</h2>
+                                        </button>
+                                        <ul class="dropdown-menu dropdown-menu-right">
+                                            <li><h2><a href="">Profile</a></h2></li>
+                                            <li><h2><a href="">Log out</a></h2></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </body>
